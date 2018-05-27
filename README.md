@@ -38,17 +38,20 @@ make homekitSettings
       export OTA_UPDATE_SERVER="192.168.1.2"
       ```
     * Set the port
-    ```shell
-    export OTA_UPDATE_PORT="8080"
-    ```
+
+      ```shell
+      export OTA_UPDATE_PORT="8080"
+      ```
     * Set the path on the server to the firmware files:
-    ```shell
-    export OTA_UPDATE_PATH="/ota/sonoff-th"
-    ```
+
+      ```shell
+      export OTA_UPDATE_PATH="/ota/sonoff-th"
+      ```
     * Name your firmware files (defaults to "latest"):
-    ```shell
-    export OTA_UPDATE_FIRMWARE_NAME="latest"
-    ```
+
+      ```shell
+      export OTA_UPDATE_FIRMWARE_NAME="latest"
+      ```
 
 7. To prevent any effects from previous firmware, it is highly recommended to erase flash:
     ```shell
