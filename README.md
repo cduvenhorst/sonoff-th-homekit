@@ -15,12 +15,12 @@ Prerequisites for building OTA-Update-Images is the presence of [openssl](https:
 git submodule update --init --recursive
 ```
 
-4. Optional: Install required python modules for QR-Code creation:
+4. Install required python modules for QR-Code creation:
 ```shell
 pip install pyqrcode pypng
 ```
 
-5. Optional: Create a new QR-Code for HomeKit pairing:
+5. Create a new QR-Code for HomeKit pairing as every device on your network needs a unique setup id:
 ```shell
 make homekitSettings
 ```
@@ -47,7 +47,7 @@ make homekitSettings
     ```
     * Name your firmware files (defaults to "latest"):
     ```shell
-    export OTA_UPDATE_FIRMWARE_NAME="/ota/sonoff-th"
+    export OTA_UPDATE_FIRMWARE_NAME="latest"
     ```
 
 7. To prevent any effects from previous firmware, it is highly recommended to erase flash:
