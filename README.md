@@ -20,10 +20,11 @@ git submodule update --init --recursive
 pip install pyqrcode pypng
 ```
 
-5. Create a new QR-Code for HomeKit pairing as every device on your network needs a unique setup id:
+5. Create a new QR-Code for HomeKit pairing as every device on your network needs a unique setup id.:
 ```shell
 make homekitSettings
 ```
+Print the QR-code ('qrcode.png') and stick it on the device (or save it on a safe place for documentation).
 6. Set your environment variables to match your needs:
 
   * Set ESPPORT environment variable pointing to USB device your ESP8266 is attached
