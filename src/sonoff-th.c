@@ -43,7 +43,7 @@
 // Generate new settings (and a new qrcode.png) with "make homekitSettings"
 #include "homekit_settings.h"
 
-#define SONOFF_FW_VERSION "1.0"
+#define SONOFF_FW_VERSION "1.1"
 
 #define DEVICE_NAME "Sonoff"
 #define DEVICE_MODEL "TH16"
@@ -278,6 +278,9 @@ void button_callback(uint8_t gpio, button_event_t event)
 
 		switchCharacteristicOn.value.bool_value =
 		    !switchCharacteristicOn.value.bool_value;
+
+		relay_write(switchCharacteristicOn.value.bool_value);
+
 		homekit_characteristic_notify(&switchCharacteristicOn,
 					      switchCharacteristicOn.value);
 		break;
